@@ -1,4 +1,5 @@
 .DS_Store
+**/.DS_Store
 .env
 .env.local
 .venv/
@@ -11,3 +12,15 @@ node_modules/
 dist/
 build/
 *.egg-info/
+mlruns/
+.zen/
+zenml_artifacts/
+
+# Local datasets and generated dataset artifacts are intentionally not committed.
+# Raw/versioned data will move to lakeFS + object storage in later milestones.
+data/raw/**
+!data/raw/.gitkeep
+data/processed/**
+!data/processed/.gitkeep
+data/manifests/**
+!data/manifests/.gitkeep
