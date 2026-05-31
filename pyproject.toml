@@ -17,5 +17,6 @@ pythonpath = [
   "services/api",
   "services/agent",
   "services/inference",
-  "packages/schemas"
+  "packages/schemas",
+  "pipelines"
 ]

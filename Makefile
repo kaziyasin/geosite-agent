@@ -1,6 +1,6 @@
 .PHONY: setup test dev-api dev-frontend compose-up compose-down compose-config
 
-PYTHONPATH := services/api:services/agent:services/inference:packages/schemas
+PYTHONPATH := services/api:services/agent:services/inference:packages/schemas:pipelines
 
 setup:
 	uv sync
