@@ -1,4 +1,4 @@
-.PHONY: setup test dev-api dev-frontend compose-up compose-down compose-config
+.PHONY: setup test dev-api dev-frontend repro-metadata compose-up compose-down compose-config
 
 PYTHONPATH := services/api:services/agent:services/inference:packages/schemas:pipelines
 
@@ -14,6 +14,9 @@ dev-api:
 
 dev-frontend:
 	cd frontend && npm run dev
+
+repro-metadata:
+	PYTHONPATH=$(PYTHONPATH) uv run python -m training.reproducibility --dataset-manifest data/manifests/apoce_manifest.local.json --prepared-metadata data/processed/apoce_rfdetr/preparation_metadata.local.json --output data/manifests/repro_metadata.local.json --json
 
 compose-up:
 	docker compose -f infrastructure/docker/docker-compose.yml up --build

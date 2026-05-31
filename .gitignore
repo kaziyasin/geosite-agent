@@ -12,6 +12,9 @@ node_modules/
 dist/
 build/
 *.egg-info/
+mlruns/
+.zen/
+zenml_artifacts/
 
 # Local datasets and generated dataset artifacts are intentionally not committed.
 # Raw/versioned data will move to lakeFS + object storage in later milestones.

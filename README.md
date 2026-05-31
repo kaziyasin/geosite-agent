@@ -108,6 +108,7 @@ make compose-up
 
 - [Architecture](docs/architecture.md)
 - [Dataset pipeline](docs/dataset.md)
+- [MLOps](docs/mlops.md)
 - [API service](services/api/README.md)
 - [Agent service](services/agent/README.md)
 - [Inference service](services/inference/README.md)
